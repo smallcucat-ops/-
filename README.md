@@ -114,3 +114,33 @@
 
         </div>
     </header>
+    <!-- 主版面 -->
+    <div class="flex-1 max-w-7xl w-full mx-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- ==================== 左側：全天候即時預警區 ==================== -->
+        <section class="lg:col-span-4 flex flex-col gap-6">
+            
+            <!-- 1. 待辦事項提醒區 -->
+            <div class="bg-white rounded-2xl border border-slate-200/60 p-5 shadow-sm flex flex-col max-h-[380px]">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-3.5">
+                    <h2 class="font-extrabold text-sm text-slate-800 flex items-center gap-2">
+                        <svg class="w-4 h-4 text-amber-500 float-subtle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                        </svg>
+                        待辦事項提醒 <span id="dateAlertCount" class="text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full text-xs font-mono ml-1">0</span>
+                    </h2>
+                </div>
+
+                <div id="dateAlertContainer" class="flex-1 overflow-y-auto space-y-2.5 pr-1 custom-scrollbar">
+                    <!-- 動態渲染 -->
+                </div>
+            </div>
+
+            <!-- 2. 機具保養提醒區 -->
+            <div class="bg-white rounded-2xl border border-slate-200/60 p-5 shadow-sm flex flex-col max-h-[380px]">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-3.5">
+                    <h2 class="font-extrabold text-sm text-slate-800 flex items-center gap-2">
+                        <svg class="w-4 h-4 text-rose-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
