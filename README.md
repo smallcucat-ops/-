@@ -75,3 +75,42 @@
                     </svg>
                     <span>🛠 時數登錄</span>
                 </button>
+                <!-- 權限管理機制 -->
+                <button
+                    id="adminPermissionBtn"
+                    onclick="toggleAdminPermission()"
+                    class="flex items-center gap-1.5 px-3.5 py-2.5 rounded-2xl text-xs font-extrabold border transition shadow-sm"
+                >
+                    <!-- JS 動態更換鎖頭狀態與樣式 -->
+                </button>
+
+                <!-- 同仁下拉選取機制 -->
+                <div class="flex items-center bg-slate-100/75 border border-slate-200 rounded-2xl p-1 gap-1">
+                    <span class="text-xs text-slate-400 pl-2.5 pr-1 flex items-center gap-1 font-semibold">
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg> 操作人:
+                    </span>
+                    <select
+                        id="currentUserSelect"
+                        onchange="onUserSelectChange(this)"
+                        class="bg-transparent text-xs text-slate-800 font-bold py-1 px-2.5 rounded-xl border-0 focus:ring-0 cursor-pointer focus:outline-none"
+                    >
+                        <!-- 動態渲染 -->
+                    </select>
+                    <button
+                        onclick="openEmployeeModalDirect()"
+                        class="p-1 hover:bg-slate-200 text-slate-400 hover:text-slate-700 rounded-lg transition"
+                        title="管理同仁名冊"
+                    >
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83 2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </header>
