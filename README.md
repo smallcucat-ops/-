@@ -220,3 +220,61 @@
                     <form onsubmit="addDateReminder(event)" class="grid grid-cols-1 md:grid-cols-12 gap-4">
                         <div class="md:col-span-8">
                             <label class="block text-[11px] font-bold text-slate-500 
+mb-1.5">1. 品項名稱 *</label>
+                            <input
+                                id="r-itemName"
+                                type="text"
+                                placeholder="例如：消防合格證更換、防汛砂包定期檢查..."
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-800 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:bg-white transition font-medium"
+                                required
+                            />
+                        </div>
+
+                        <div class="md:col-span-4">
+                            <label class="block text-[11px] font-bold text-slate-500 mb-1.5">2. 部門歸屬</label>
+                            <select
+                                id="r-department"
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-800 focus:outline-none font-medium"
+                            >
+                                <!-- 動態載入 -->
+                            </select>
+                        </div>
+
+                        <div class="md:col-span-4">
+                            <label class="block text-[11px] font-bold text-slate-500 mb-1.5">3. 擔當同仁</label>
+                            <select
+                                id="r-manager"
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-800 focus:outline-none font-medium"
+                            >
+                                <!-- 動態載入 -->
+                            </select>
+                        </div>
+
+                        <div class="md:col-span-4">
+                            <label class="block text-[11px] font-bold text-slate-500 mb-1.5">4. 到期日期 *</label>
+                            <input
+                                id="r-expiryDate"
+                                type="date"
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-1.5 text-xs text-slate-800 focus:outline-none font-medium"
+                                required
+                            />
+                        </div>
+
+                        <div class="md:col-span-4">
+                            <label class="block text-[11px] font-bold text-slate-500 mb-1.5">5. 提醒警示天數 (三個設定)</label>
+                            <div class="grid grid-cols-3 gap-1.5">
+                                <input id="r-remindDays1" type="number" value="30" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-1 py-2 text-xs text-center text-slate-800 font-medium" />
+                                <input id="r-remindDays2" type="number" value="14" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-1 py-2 text-xs text-center text-slate-800 font-medium" />
+                                <input id="r-remindDays3" type="number" value="7" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-1 py-2 text-xs text-center text-slate-800 font-medium" />
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-9">
+                            <label class="block text-[11px] font-bold text-slate-500 mb-1.5">6. 備註說明</label>
+                            <input
+                                id="r-remark"
+                                type="text"
+                                placeholder="選填，可在此紀錄文件編號、置放處或備辦手續細節..."
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-800 font-medium"
+                            />
+                        </div>
